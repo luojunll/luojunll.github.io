@@ -4,7 +4,7 @@
   <title>LuoThink</title>
   <subtitle>开源工具、效率方法，记录并输出一切能让自己提升的知识。</subtitle>
   <icon>https://newzone.top/favicon.ico</icon>
-  <updated>2024-07-14T16:54:27.042Z</updated>
+  <updated>2024-07-14T16:58:48.606Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://newzone.top/atom.xml"/>
   <link rel="alternate" href="https://newzone.top/"/>
@@ -49,18 +49,20 @@
     <published>2024-07-14T09:57:46.000Z</published>
   </entry>
   <entry>
-    <title type="text">一级标题</title>
+    <title type="text">markdown语法示例</title>
     <id>https://newzone.top/code/markdown/markdown%E8%AF%AD%E6%B3%95%E7%A4%BA%E4%BE%8B.html</id>
     <link href="https://newzone.top/code/markdown/markdown%E8%AF%AD%E6%B3%95%E7%A4%BA%E4%BE%8B.html"/>
-    <updated>2024-07-14T16:45:05.000Z</updated>
-    <summary type="html"><![CDATA[<blockquote>
+    <updated>2024-07-14T16:57:38.000Z</updated>
+    <summary type="html"><![CDATA[
+<blockquote>
 <p>微信公众号排版工具。问题或建议，请公众号留言。<strong><a href="#jump_8">程序员翻身</a></strong></p>
 </blockquote>
 <p>建议使用 <strong>Chrome</strong> 浏览器，体验最佳效果。</p>
 <p>使用微信公众号编辑器有一个十分头疼的问题：粘贴出来的代码，格式错乱，空间小还带行号，而且特别丑。Markdown.com.cn编辑器能够解决这个问题。</p>
 <p>Markdown是一种轻量级的「标记语言」。</p>
 <p>请阅读下方文本熟悉工具使用方法，本文可直接拷贝到微信中预览。</p>]]></summary>
-    <content type="html"><![CDATA[<blockquote>
+    <content type="html"><![CDATA[
+<blockquote>
 <p>微信公众号排版工具。问题或建议，请公众号留言。<strong><a href="#jump_8">程序员翻身</a></strong></p>
 </blockquote>
 <p>建议使用 <strong>Chrome</strong> 浏览器，体验最佳效果。</p>
