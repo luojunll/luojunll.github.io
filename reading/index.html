@@ -59,7 +59,7 @@
       }
     </style>
     <!-- Matomo 此区块为统计代码，请删除-->
-    <script>
+    <!-- <script>
       var _paq = (window._paq = window._paq || []);
       /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
       _paq.push(["trackPageView"]);
@@ -75,7 +75,7 @@
         g.src = u + "matomo.js";
         s.parentNode.insertBefore(g, s);
       })();
-    </script>
+    </script> -->
     <!-- End Matomo Code 此区块为统计代码，请删除-->
   </head>
 
@@ -159,23 +159,23 @@
         },
         // 部署 Waline：https://waline.js.org/guide/get-started.html
         // 阅读量统计与评论，不需要可删除本区块
-      //   waline: {
-      //     serverURL: "https://waline.newzone.top",
-      //     pageview: true, // 浏览量统计
-      //     // Waline 等级标签
-      //     walineLocales: {
-      //       "/": {
-      //         admin: "盛年不重来，一日难再晨",
-      //         level0: "锻体",
-      //         level1: "炼气",
-      //         level2: "筑基",
-      //         level3: "金丹",
-      //         level4: "元婴",
-      //         level5: "化神",
-      //       },
-      //     },
-      //   },
-      // };
+        waline: {
+          serverURL: "https://waline.newzone.top",
+          pageview: true, // 浏览量统计
+          // Waline 等级标签
+          walineLocales: {
+            "/": {
+              admin: "盛年不重来，一日难再晨",
+              level0: "锻体",
+              level1: "炼气",
+              level2: "筑基",
+              level3: "金丹",
+              level4: "元婴",
+              level5: "化神",
+            },
+          },
+        },
+      };
     </script>
 
     <script src="https://oss.newzone.top/docsify/main/4.13.1/docsify.min.js"></script>
