@@ -22,6 +22,14 @@ export default sidebar({
       icon: "",
       prefix: "/code/",
       collapsible: true,
+      children: [
+        {
+          text: "📝 Markdown",
+          icon: "",
+          prefix: "/code/markdown/",
+          collapsible: true,
+        },
+      ]
     },
     {
       text: "博客文章",
