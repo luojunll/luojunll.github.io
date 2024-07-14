@@ -28,6 +28,9 @@ export default sidebar({
           icon: "",
           prefix: "/code/markdown/",
           collapsible: true,
+          children: [
+            'markdown语法示例.md',
+          ],
         },
       ]
     },
