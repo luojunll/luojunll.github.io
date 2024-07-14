@@ -4,7 +4,7 @@
   <title>LearnData 开源笔记</title>
   <subtitle>开源工具、效率方法、心理学探索的自我提升笔记，记录并输出一切能让自己提升的知识。</subtitle>
   <icon>https://newzone.top/favicon.ico</icon>
-  <updated>2024-07-14T10:00:26.775Z</updated>
+  <updated>2024-07-14T10:21:44.369Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://newzone.top/atom.xml"/>
   <link rel="alternate" href="https://newzone.top/"/>
@@ -33,5 +33,19 @@
 ]]></content>
     <category term="使用指南"/>
     <published>2024-03-01T00:00:00.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">博客文章测试</title>
+    <id>https://newzone.top/posts/2024-07-14-blog_test.html</id>
+    <link href="https://newzone.top/posts/2024-07-14-blog_test.html"/>
+    <updated>2024-07-14T10:20:09.000Z</updated>
+    <summary type="html"><![CDATA[<p>博客文章内容，支持 Markdown 和 HTML 语言。
+我来测试一下。</p>
+]]></summary>
+    <content type="html"><![CDATA[<p>博客文章内容，支持 Markdown 和 HTML 语言。
+我来测试一下。</p>
+]]></content>
+    <category term="工具"/>
+    <published>2024-07-14T09:57:46.000Z</published>
   </entry>
 </feed>
