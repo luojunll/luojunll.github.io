@@ -4,9 +4,6 @@ import { sidebar } from "vuepress-theme-hope";
 // https://fontawesome.com/search?m=free&o=r
 export default sidebar({
   "": [
-    "/DailyRoutine",
-    "/Fitness",
-    // 读书笔记架构更换到 docsify，不能使用相对链接
     { text: "读书笔记", icon: "fa-brands fa-readme", link: "https://luojunll.github.io/reading/" },
     // 指定显示页面
     {
@@ -23,32 +20,6 @@ export default sidebar({
           icon: "fa-solid fa-code-compare",
           collapsible: true,
           children: ["design.md"],
-        },
-      ],
-    },
-    {
-      text: "🌐 页面开发",
-      icon: "",
-      prefix: "/web/",
-      link: "",
-      collapsible: true,
-      children: "structure",
-    },
-    {
-      text: "🏗️ 网站部署",
-      icon: "",
-      prefix: "/deploy/",
-      link: "",
-      collapsible: true,
-      children: [
-        "Static.md",
-        "CloudServices.md",
-        "VPS.md",
-        {
-          text: "部署工具",
-          icon: "fa-brands fa-windows",
-          collapsible: true,
-          children: ["GitHub.md", "Cloudflare.md", "MySQL.md", "DNS.md"],
         },
       ],
     },
@@ -74,13 +45,6 @@ export default sidebar({
       ],
     },
     {
-      text: "🛖 生活记录",
-      icon: "",
-      prefix: "/family/",
-      collapsible: true,
-      children: "structure",
-    },
-    {
       text: "博客文章",
       icon: "fa-solid fa-feather-pointed",
       prefix: "/_posts/",
@@ -89,6 +53,4 @@ export default sidebar({
       children: "structure",
     },
   ],
-  // 专题区（独立侧边栏）
-  "/apps/topic/": "structure",
 });
