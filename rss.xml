@@ -6,8 +6,8 @@
     <link>https://newzone.top/</link>
     <description>开源工具、效率方法，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 14 Jul 2024 15:19:31 GMT</pubDate>
-    <lastBuildDate>Sun, 14 Jul 2024 15:19:31 GMT</lastBuildDate>
+    <pubDate>Sun, 14 Jul 2024 16:46:16 GMT</pubDate>
+    <lastBuildDate>Sun, 14 Jul 2024 16:46:16 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>工具</category>
@@ -45,6 +45,88 @@
       <content:encoded><![CDATA[<p>博客文章内容，支持 Markdown 和 HTML 语言。
 我来测试一下。</p>
 ]]></content:encoded>
+    </item>
+    <item>
+      <title>一级标题</title>
+      <link>https://newzone.top/code/markdown/markdown%E8%AF%AD%E6%B3%95%E7%A4%BA%E4%BE%8B.html</link>
+      <guid>https://newzone.top/code/markdown/markdown%E8%AF%AD%E6%B3%95%E7%A4%BA%E4%BE%8B.html</guid>
+      <source url="https://newzone.top/rss.xml">一级标题</source>
+      <description>微信公众号排版工具。问题或建议，请公众号留言。程序员翻身 建议使用 Chrome 浏览器，体验最佳效果。 使用微信公众号编辑器有一个十分头疼的问题：粘贴出来的代码，格式错乱，空间小还带行号，而且特别丑。Markdown.com.cn编辑器能够解决这个问题。 Markdown是一种轻量级的「标记语言」。 请阅读下方文本熟悉工具使用方法，本文可直接拷贝到微...</description>
+      <pubDate>Sun, 14 Jul 2024 16:45:05 GMT</pubDate>
+      <content:encoded><![CDATA[<blockquote>
+<p>微信公众号排版工具。问题或建议，请公众号留言。<strong><a href="#jump_8">程序员翻身</a></strong></p>
+</blockquote>
+<p>建议使用 <strong>Chrome</strong> 浏览器，体验最佳效果。</p>
+<p>使用微信公众号编辑器有一个十分头疼的问题：粘贴出来的代码，格式错乱，空间小还带行号，而且特别丑。Markdown.com.cn编辑器能够解决这个问题。</p>
+<p>Markdown是一种轻量级的「标记语言」。</p>
+<p>请阅读下方文本熟悉工具使用方法，本文可直接拷贝到微信中预览。</p>
+<h2>1 Markdown.com.cn 简介</h2>
+<ul>
+<li>支持自定义样式的 Markdown 编辑器</li>
+<li>支持微信公众号、知乎和稀土掘金</li>
+<li>点击右上方对应图标，一键复制到各平台</li>
+</ul>
+<h2>2 Markdown语法教程</h2>
+<h3>2.1 标题</h3>
+<p>不同数量的<code>#</code>可以完成不同的标题，如下：</p>
+<h1>一级标题</h1>
+<h2>二级标题</h2>
+<h3>三级标题</h3>
+<h3>2.2 字体</h3>
+<p>粗体、斜体、粗体和斜体，删除线，需要在文字前后加不同的标记符号。如下：</p>
+<p><strong>这个是粗体</strong></p>
+<p><em>这个是斜体</em></p>
+<p><em><strong>这个是粗体加斜体</strong></em></p>
+<p><sub>这里想用删除线</sub>~</p>
+<p>注：如果想给字体换颜色、字体或者居中显示，需要使用内嵌HTML来实现。</p>
+<h3>2.3 无序列表</h3>
+<p>无序列表的使用，在符号<code>-</code>后加空格使用。如下：</p>
+<ul>
+<li>无序列表 1</li>
+<li>无序列表 2</li>
+<li>无序列表 3</li>
+</ul>
+<p>如果要控制列表的层级，则需要在符号<code>-</code>前使用空格。如下：</p>
+<ul>
+<li>无序列表 1</li>
+<li>无序列表 2
+<ul>
+<li>无序列表 2.1</li>
+<li>无序列表 2.2</li>
+</ul>
+</li>
+</ul>
+<p><strong>由于微信原因，最多支持到二级列表</strong>。</p>
+<h3>2.4 有序列表</h3>
+<p>有序列表的使用，在数字及符号<code>.</code>后加空格后输入内容，如下：</p>
+<ol>
+<li>有序列表 1</li>
+<li>有序列表 2</li>
+<li>有序列表 3</li>
+</ol>
+<h3>2.5 引用</h3>
+<p>引用的格式是在符号<code>&gt;</code>后面书写文字。如下：</p>
+<blockquote>
+<p>读一本好书，就是在和高尚的人谈话。 ——歌德</p>
+</blockquote>
+<blockquote>
+<p>雇用制度对工人不利，但工人根本无力摆脱这个制度。 ——阮一峰</p>
+</blockquote>
+<h3>2.7 链接</h3>
+<p>微信公众号仅支持公众号文章链接，即域名为<code>https://mp.weixin.qq.com/</code>的合法链接。使用方法如下所示：</p>
+<p>对于该论述，欢迎读者查阅之前发过的文章，<a href="https://mp.weixin.qq.com/s/s5IhxV2ooX3JN_X416nidA" target="_blank" rel="noopener noreferrer">你是《未来世界的幸存者》么？</a>
+<a id="jump_8"></a></p>
+<h3>2.8 图片</h3>
+<p>插入图片，格式如下：</p>
+<figure><img src="https://www.nginx.cn/wp-content/uploads/2020/03/qrcode_for_gh_82cf87d482f0_258.jpg" alt="这里写图片描述" tabindex="0" loading="lazy"><figcaption>这里写图片描述</figcaption></figure>
+<p>支持 jpg、png、gif、svg 等图片格式，<strong>其中 svg 文件仅可在微信公众平台中使用</strong>，svg 文件示例如下：</p>
+<figure><img src="https://markdown.com.cn/images/i-am-svg.svg" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<p>支持图片<strong>拖拽和截图粘贴</strong>到编辑器中。</p>
+<p>注：支持图片 <em><strong>拖拽和截图粘贴</strong></em> 到编辑器中，仅支持 https 的图片，图片粘贴到微信时会自动上传微信服务器。</p>
+<h3>2.9 分割线</h3>
+<p>可以在一行中用三个以上的减号来建立一个分隔线，同时需要在分隔线的上面空一行。如下：</p>
+]]></content:encoded>
+      <enclosure url="https://www.nginx.cn/wp-content/uploads/2020/03/qrcode_for_gh_82cf87d482f0_258.jpg" type="image/jpeg"/>
     </item>
   </channel>
 </rss>
