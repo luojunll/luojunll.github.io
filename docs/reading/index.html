@@ -133,7 +133,7 @@
         // 添加页脚
         footer: {
           copy: "盛年不重来，一日难再晨。 —— ",
-          auth: '🏷️ <a href="https://newzone.top/" target="_blank">LearnData</a><br/><br/><span id="sitetime"></span>',
+          auth: '🏷️ <a href="https://luojunll.github.io/" target="_blank">LearnData</a><br/><br/><span id="sitetime"></span>',
           //pre: '<hr/>',
           style: "text-align: left;",
           //class: 'className',
@@ -199,46 +199,7 @@
 
     <script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-y/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://oss.newzone.top/instantpage.min.js"></script>
-    <!-- 添加网站运行时间统计 -->
-    <script language="javascript">
-      function siteTime() {
-        window.setTimeout("siteTime()", 1000);
-        var seconds = 1000;
-        var minutes = seconds * 60;
-        var hours = minutes * 60;
-        var days = hours * 24;
-        var years = days * 365;
-        var today = new Date();
-        var todayYear = today.getFullYear();
-        var todayMonth = today.getMonth() + 1;
-        var todayDate = today.getDate();
-        var todayHour = today.getHours();
-        var todayMinute = today.getMinutes();
-        var todaySecond = today.getSeconds();
-        /* Date.UTC() -- 返回 date 对象距世界标准时间 (UTC)1970 年 1 月 1 日午夜之间的毫秒数 (时间戳)
-      year - 作为 date 对象的年份，为 4 位年份值
-      month - 0-11 之间的整数，做为 date 对象的月份
-      day - 1-31 之间的整数，做为 date 对象的天数
-      hours - 0(午夜 24 点)-23 之间的整数，做为 date 对象的小时数
-      minutes - 0-59 之间的整数，做为 date 对象的分钟数
-      seconds - 0-59 之间的整数，做为 date 对象的秒数
-      microseconds - 0-999 之间的整数，做为 date 对象的毫秒数 */
-        var t1 = Date.UTC(2022, 7, 23, 22, 22, 22); //北京时间 2022-07-23 22:22:22 //LearnData 首个 commit 时间，该为你自己值得纪念的日子吧
-        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
-        var diff = t2 - t1;
-        var diffYears = Math.floor(diff / years);
-        var diffDays = Math.floor(diff / days - diffYears * 365);
-        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
-        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
-        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
-        if (diffYears > 0) {
-          document.getElementById("sitetime").innerHTML = " 已运行 " + diffYears + " 年 " + diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分 " + diffSeconds + " 秒 ";
-        } else {
-          document.getElementById("sitetime").innerHTML = " 已运行 " + diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分 " + diffSeconds + " 秒 ";
-        }
-      }
-      siteTime();
-    </script>
+    
     <script src="https://oss.newzone.top/docsify/docsify-count/dist/countable.min.js"></script>
     <script src="https://oss.newzone.top/docsify/docsify-waline/docsify-waline.min.js"></script>
   </body>
