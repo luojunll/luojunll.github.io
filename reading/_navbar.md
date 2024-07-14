@@ -1,3 +1,3 @@
-- [🚀 LuoThink](https://luojunll.github.io/)
+- [🚀 LearnData](https://luojunll.github.io/)
 - [📝 博客文章](https://luojunll.github.io/blog.html)
 - [🔨 工具收藏](https://nav.newzone.top/)
