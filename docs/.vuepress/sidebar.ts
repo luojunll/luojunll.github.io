@@ -15,12 +15,6 @@ export default sidebar({
       children: [
         "Applist.md",
         "toolbox.md",
-        {
-          text: "其他",
-          icon: "fa-solid fa-code-compare",
-          collapsible: true,
-          children: ["design.md"],
-        },
       ],
     },
     {
@@ -28,21 +22,6 @@ export default sidebar({
       icon: "",
       prefix: "/code/",
       collapsible: true,
-      children: [
-        "README.md",
-        {
-          text: "Basic",
-          icon: "fa-solid fa-cube",
-          collapsible: true,
-          children: ["Markdown.md", "Electron.md", "AutoHotkey.md", "Regex.md"],
-        },
-        {
-          text: "FrondEnd",
-          icon: "fa-solid fa-object-group",
-          collapsible: true,
-          children: ["Vue.md", "HTML.md", "Javascript.md", "Python.md"],
-        },
-      ],
     },
     {
       text: "博客文章",
