@@ -16,42 +16,12 @@ export default navbar([
         icon: "fa-brands fa-chrome",
         link: "apps/Chrome",
       },
-      {
-        text: "服务/专题",
-        icon: "",
-        prefix: "",
-        children: [
-          {
-            text: "专题示例",
-            icon: "fa-solid fa-dice-d20",
-            link: "apps/topic/",
-          },
-        ],
-      },
+      
     ],
   },
   {
-    text: "生活",
-    icon: "fa-solid fa-bed-pulse",
-    prefix: "/family/",
-    children: ["Diet", "Coupon"],
-  },
-  {
-    text: "工具",
-    icon: "fa-solid fa-toolbox",
-    children: [
-      {
-        text: "ChatGPT SC",
-        icon: "fa-solid fa-bolt",
-        link: "https://www.aishort.top/",
-      },
-      { text: "IMGPrompt", icon: "fa-solid fa-image", link: "https://prompt.newzone.top/" },
-      { text: "多语言翻译", icon: "fa-solid fa-language", link: "https://tools.newzone.top/json-translate" },
-      {
-        text: "工具收藏",
-        icon: "fa-solid fa-bars",
-        link: "https://nav.newzone.top/",
-      },
-    ],
+    text: "工具收藏",
+    icon: "fa-solid fa-bars",
+    link: "https://nav.newzone.top/",
   },
 ]);
