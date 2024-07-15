@@ -32,6 +32,15 @@ export default sidebar({
             'markdown语法示例.md',
           ],
         },
+        {
+          text: "🤖 算法",
+          icon: "",
+          prefix: "/code/算法/",
+          collapsible: true,
+          children: [
+            '希尔排序.md',
+          ],
+        },
       ]
     },
     {

@@ -15,6 +15,8 @@ icon: fa-solid fa-book-open-reader
 
 3. **白嫖**一下 github.io 的服务器，闲着也是闲着。 
 
+4. 遵循费曼大神的教诲，看看能不能增强自己的编程能力！🤣
+
 
 ## 🧱 笔记结构
 
