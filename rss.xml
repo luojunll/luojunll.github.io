@@ -6,53 +6,19 @@
     <link>https://newzone.top/</link>
     <description>开源工具、效率方法，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 14 Jul 2024 16:58:48 GMT</pubDate>
-    <lastBuildDate>Sun, 14 Jul 2024 16:58:48 GMT</lastBuildDate>
+    <pubDate>Mon, 15 Jul 2024 03:02:39 GMT</pubDate>
+    <lastBuildDate>Mon, 15 Jul 2024 03:02:39 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
-    <category>工具</category>
-    <category>使用指南</category>
-    <item>
-      <title>博客文章样例2</title>
-      <link>https://newzone.top/posts/2024-03-02-blog_example2.html</link>
-      <guid>https://newzone.top/posts/2024-03-02-blog_example2.html</guid>
-      <source url="https://newzone.top/rss.xml">博客文章样例2</source>
-      <description>博客文章内容，支持 Markdown 和 HTML 语言。</description>
-      <category>工具</category>
-      <pubDate>Sat, 02 Mar 2024 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<p>博客文章内容，支持 Markdown 和 HTML 语言。</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>博客文章样例</title>
-      <link>https://newzone.top/posts/2024-03-01-blog_example.html</link>
-      <guid>https://newzone.top/posts/2024-03-01-blog_example.html</guid>
-      <source url="https://newzone.top/rss.xml">博客文章样例</source>
-      <description>博客文章内容，支持 Markdown 和 HTML 语言。</description>
-      <category>使用指南</category>
-      <pubDate>Fri, 01 Mar 2024 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<p>博客文章内容，支持 Markdown 和 HTML 语言。</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>博客文章测试</title>
-      <link>https://newzone.top/posts/2024-07-14-blog_test.html</link>
-      <guid>https://newzone.top/posts/2024-07-14-blog_test.html</guid>
-      <source url="https://newzone.top/rss.xml">博客文章测试</source>
-      <description>博客文章内容，支持 Markdown 和 HTML 语言。 我来测试一下。</description>
-      <category>工具</category>
-      <pubDate>Sun, 14 Jul 2024 09:57:46 GMT</pubDate>
-      <content:encoded><![CDATA[<p>博客文章内容，支持 Markdown 和 HTML 语言。
-我来测试一下。</p>
-]]></content:encoded>
-    </item>
+    <category>代码编程</category>
     <item>
       <title>markdown语法示例</title>
       <link>https://newzone.top/code/markdown/markdown%E8%AF%AD%E6%B3%95%E7%A4%BA%E4%BE%8B.html</link>
       <guid>https://newzone.top/code/markdown/markdown%E8%AF%AD%E6%B3%95%E7%A4%BA%E4%BE%8B.html</guid>
       <source url="https://newzone.top/rss.xml">markdown语法示例</source>
       <description>markdown语法示例 微信公众号排版工具。问题或建议，请公众号留言。程序员翻身 建议使用 Chrome 浏览器，体验最佳效果。 使用微信公众号编辑器有一个十分头疼的问题：粘贴出来的代码，格式错乱，空间小还带行号，而且特别丑。Markdown.com.cn编辑器能够解决这个问题。 Markdown是一种轻量级的「标记语言」。 请阅读下方文本熟悉工具使...</description>
-      <pubDate>Sun, 14 Jul 2024 16:45:05 GMT</pubDate>
+      <category>代码编程</category>
+      <pubDate>Sun, 14 Jul 2024 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[
 <blockquote>
 <p>微信公众号排版工具。问题或建议，请公众号留言。<strong><a href="#jump_8">程序员翻身</a></strong></p>
