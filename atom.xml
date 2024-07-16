@@ -4,12 +4,286 @@
   <title>LuoThink</title>
   <subtitle>开源工具、效率方法，记录并输出一切能让自己提升的知识。</subtitle>
   <icon>https://newzone.top/favicon.ico</icon>
-  <updated>2024-07-15T16:55:23.129Z</updated>
+  <updated>2024-07-16T07:13:59.718Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://newzone.top/atom.xml"/>
   <link rel="alternate" href="https://newzone.top/"/>
   <category term="代码编程"/>
   <category term="算法"/>
+  <entry>
+    <title type="text">归并排序</title>
+    <id>https://newzone.top/code/%E7%AE%97%E6%B3%95/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F.html</id>
+    <link href="https://newzone.top/code/%E7%AE%97%E6%B3%95/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F.html"/>
+    <updated>2024-07-16T07:12:42.000Z</updated>
+    <summary type="html"><![CDATA[
+<h2>介绍</h2>
+<p><strong>归并排序</strong>（<em>Merge Sort</em>)是一种基于分治法的排序算法。它的主要思想是将一个大的问题分解成若干个小问题来解决，然后将解决的结果合并在一起。归并排序的时间复杂度为 𝑂(𝑛log𝑛),是效率较高的排序算法之一。</p>
+<h2>代码</h2>
+<h3>迭代</h3>
+<ol>
+<li>C</li>
+</ol>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span>#include &lt;stdio.h&gt;</span></span>
+<span class="line"><span>#include &lt;stdlib.h&gt;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>int min(int x, int y)</span></span>
+<span class="line"><span>{</span></span>
+<span class="line"><span>    return x &lt; y ? x : y;</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>void merge_sort(int arr[], int len)</span></span>
+<span class="line"><span>{</span></span>
+<span class="line"><span>    int *a = arr;</span></span>
+<span class="line"><span>    int *b = (int *)malloc(len * sizeof(int));</span></span>
+<span class="line"><span>    if (b == NULL)</span></span>
+<span class="line"><span>    {</span></span>
+<span class="line"><span>        fprintf(stderr, "Memory allocation failed\n");</span></span>
+<span class="line"><span>        return;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>    int seg, start;</span></span>
+<span class="line"><span>    for (seg = 1; seg &lt; len; seg += seg)</span></span>
+<span class="line"><span>    {</span></span>
+<span class="line"><span>        for (start = 0; start &lt; len; start += seg + seg)</span></span>
+<span class="line"><span>        {</span></span>
+<span class="line"><span>            int low = start, mid = min(start + seg, len), high = min(start + 2 * seg, len);</span></span>
+<span class="line"><span>            int k = low;</span></span>
+<span class="line"><span>            int start1 = low, end1 = mid;</span></span>
+<span class="line"><span>            int start2 = mid, end2 = high;</span></span>
+<span class="line"><span>            while (start1 &lt; end1 &amp;&amp; start2 &lt; end2)</span></span>
+<span class="line"><span>                b[k++] = a[start1] &lt; a[start2] ? a[start1++] : a[start2++];</span></span>
+<span class="line"><span>            while (start1 &lt; end1)</span></span>
+<span class="line"><span>                b[k++] = a[start1++];</span></span>
+<span class="line"><span>            while (start2 &lt; end2)</span></span>
+<span class="line"><span>                b[k++] = a[start2++];</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>        int *temp = a;</span></span>
+<span class="line"><span>        a = b;</span></span>
+<span class="line"><span>        b = temp;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>    if (a != arr)</span></span>
+<span class="line"><span>    {</span></span>
+<span class="line"><span>        for (int i = 0; i &lt; len; i++)</span></span>
+<span class="line"><span>            arr[i] = a[i];</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>    free(b);</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>int main()</span></span>
+<span class="line"><span>{</span></span>
+<span class="line"><span>    int arr[] = {22, 34, 3, 32, 82, 55, 89, 50, 37, 5, 64, 35, 9, 70};</span></span>
+<span class="line"><span>    int len = sizeof(arr) / sizeof(*arr);</span></span>
+<span class="line"><span>    merge_sort(arr, len);</span></span>
+<span class="line"><span>    for (int i = 0; i &lt; len; i++)</span></span>
+<span class="line"><span>        printf("%d ", arr[i]);</span></span>
+<span class="line"><span>    printf("\n");</span></span>
+<span class="line"><span>    return 0;</span></span>
+<span class="line"><span>}</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></summary>
+    <content type="html"><![CDATA[
+<h2>介绍</h2>
+<p><strong>归并排序</strong>（<em>Merge Sort</em>)是一种基于分治法的排序算法。它的主要思想是将一个大的问题分解成若干个小问题来解决，然后将解决的结果合并在一起。归并排序的时间复杂度为 𝑂(𝑛log𝑛),是效率较高的排序算法之一。</p>
+<h2>代码</h2>
+<h3>迭代</h3>
+<ol>
+<li>C</li>
+</ol>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span>#include &lt;stdio.h&gt;</span></span>
+<span class="line"><span>#include &lt;stdlib.h&gt;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>int min(int x, int y)</span></span>
+<span class="line"><span>{</span></span>
+<span class="line"><span>    return x &lt; y ? x : y;</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>void merge_sort(int arr[], int len)</span></span>
+<span class="line"><span>{</span></span>
+<span class="line"><span>    int *a = arr;</span></span>
+<span class="line"><span>    int *b = (int *)malloc(len * sizeof(int));</span></span>
+<span class="line"><span>    if (b == NULL)</span></span>
+<span class="line"><span>    {</span></span>
+<span class="line"><span>        fprintf(stderr, "Memory allocation failed\n");</span></span>
+<span class="line"><span>        return;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>    int seg, start;</span></span>
+<span class="line"><span>    for (seg = 1; seg &lt; len; seg += seg)</span></span>
+<span class="line"><span>    {</span></span>
+<span class="line"><span>        for (start = 0; start &lt; len; start += seg + seg)</span></span>
+<span class="line"><span>        {</span></span>
+<span class="line"><span>            int low = start, mid = min(start + seg, len), high = min(start + 2 * seg, len);</span></span>
+<span class="line"><span>            int k = low;</span></span>
+<span class="line"><span>            int start1 = low, end1 = mid;</span></span>
+<span class="line"><span>            int start2 = mid, end2 = high;</span></span>
+<span class="line"><span>            while (start1 &lt; end1 &amp;&amp; start2 &lt; end2)</span></span>
+<span class="line"><span>                b[k++] = a[start1] &lt; a[start2] ? a[start1++] : a[start2++];</span></span>
+<span class="line"><span>            while (start1 &lt; end1)</span></span>
+<span class="line"><span>                b[k++] = a[start1++];</span></span>
+<span class="line"><span>            while (start2 &lt; end2)</span></span>
+<span class="line"><span>                b[k++] = a[start2++];</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>        int *temp = a;</span></span>
+<span class="line"><span>        a = b;</span></span>
+<span class="line"><span>        b = temp;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>    if (a != arr)</span></span>
+<span class="line"><span>    {</span></span>
+<span class="line"><span>        for (int i = 0; i &lt; len; i++)</span></span>
+<span class="line"><span>            arr[i] = a[i];</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>    free(b);</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>int main()</span></span>
+<span class="line"><span>{</span></span>
+<span class="line"><span>    int arr[] = {22, 34, 3, 32, 82, 55, 89, 50, 37, 5, 64, 35, 9, 70};</span></span>
+<span class="line"><span>    int len = sizeof(arr) / sizeof(*arr);</span></span>
+<span class="line"><span>    merge_sort(arr, len);</span></span>
+<span class="line"><span>    for (int i = 0; i &lt; len; i++)</span></span>
+<span class="line"><span>        printf("%d ", arr[i]);</span></span>
+<span class="line"><span>    printf("\n");</span></span>
+<span class="line"><span>    return 0;</span></span>
+<span class="line"><span>}</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ol start="2">
+<li>Python</li>
+</ol>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span>def min(x, y):</span></span>
+<span class="line"><span>    return x if x &lt; y else y</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>def merge_sort(arr):</span></span>
+<span class="line"><span>    n = len(arr)</span></span>
+<span class="line"><span>    a = arr[:]</span></span>
+<span class="line"><span>    b = [0] * n</span></span>
+<span class="line"><span>    seg = 1</span></span>
+<span class="line"><span>    while seg &lt; n:</span></span>
+<span class="line"><span>        for start in range(0, n, seg + seg):</span></span>
+<span class="line"><span>            low = start</span></span>
+<span class="line"><span>            mid = min(start + seg, n)</span></span>
+<span class="line"><span>            high = min(start + seg + seg, n)</span></span>
+<span class="line"><span>            k = low</span></span>
+<span class="line"><span>            start1 = low</span></span>
+<span class="line"><span>            end1 = mid</span></span>
+<span class="line"><span>            start2 = mid</span></span>
+<span class="line"><span>            end2 = high</span></span>
+<span class="line"><span>            while start1 &lt; end1 and start2 &lt; end2:</span></span>
+<span class="line"><span>                if a[start1] &lt; a[start2]:</span></span>
+<span class="line"><span>                    b[k] = a[start1]</span></span>
+<span class="line"><span>                    start1 += 1</span></span>
+<span class="line"><span>                else:</span></span>
+<span class="line"><span>                    b[k] = a[start2]</span></span>
+<span class="line"><span>                    start2 += 1</span></span>
+<span class="line"><span>                k += 1</span></span>
+<span class="line"><span>            while start1 &lt; end1:</span></span>
+<span class="line"><span>                b[k] = a[start1]</span></span>
+<span class="line"><span>                start1 += 1</span></span>
+<span class="line"><span>                k += 1</span></span>
+<span class="line"><span>            while start2 &lt; end2:</span></span>
+<span class="line"><span>                b[k] = a[start2]</span></span>
+<span class="line"><span>                start2 += 1</span></span>
+<span class="line"><span>                k += 1</span></span>
+<span class="line"><span>        a, b = b, a</span></span>
+<span class="line"><span>        seg += seg</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    if a != arr:</span></span>
+<span class="line"><span>        for i in range(n):</span></span>
+<span class="line"><span>            arr[i] = a[i]</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>arr = [38, 27, 43, 3, 9, 82, 10]</span></span>
+<span class="line"><span>merge_sort(arr)</span></span>
+<span class="line"><span>print(arr)</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ol start="3">
+<li>
+<h4>分析</h4>
+</li>
+</ol>
+<p>先将数组分为1个为一组，分了7组， 再1，2；3，4；5，6；7；两两比较，给比较的两组定义一个指针，指针所指的值相互比较, 也就是在这个块<code>while start1 &lt; end1 and start2 &lt; end2</code>进行，小的值排左边，直到有一组的指针指向了末尾；如果剩的是第一组的就调用<code>while start1 &lt; end1</code>这个块，否则调用<code>while start2 &lt; end2</code>这个块。以此类推，分成4组， 分成2组......最终得到有序的数列。</p>
+<h2>递归</h2>
+<ol>
+<li>C</li>
+</ol>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span>#include &lt;stdio.h&gt;</span></span>
+<span class="line"><span>#include &lt;stdlib.h&gt; // 加入此行以便使用 malloc 和 free</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>void merge_sort_recursive(int arr[], int reg[], int start, int end) {</span></span>
+<span class="line"><span>    if (start &gt;= end)</span></span>
+<span class="line"><span>        return;</span></span>
+<span class="line"><span>    int len = end - start, mid = (len &gt;&gt; 1) + start;</span></span>
+<span class="line"><span>    int start1 = start, end1 = mid;</span></span>
+<span class="line"><span>    int start2 = mid + 1, end2 = end;</span></span>
+<span class="line"><span>    merge_sort_recursive(arr, reg, start1, end1);</span></span>
+<span class="line"><span>    merge_sort_recursive(arr, reg, start2, end2);</span></span>
+<span class="line"><span>    int k = start;</span></span>
+<span class="line"><span>    while (start1 &lt;= end1 &amp;&amp; start2 &lt;= end2)</span></span>
+<span class="line"><span>        reg[k++] = arr[start1] &lt; arr[start2] ? arr[start1++] : arr[start2++];</span></span>
+<span class="line"><span>    while (start1 &lt;= end1)</span></span>
+<span class="line"><span>        reg[k++] = arr[start1++];</span></span>
+<span class="line"><span>    while (start2 &lt;= end2)</span></span>
+<span class="line"><span>        reg[k++] = arr[start2++];</span></span>
+<span class="line"><span>    for (k = start; k &lt;= end; k++)</span></span>
+<span class="line"><span>        arr[k] = reg[k];</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span>void merge_sort(int arr[], const int len) {</span></span>
+<span class="line"><span>    int reg[len];</span></span>
+<span class="line"><span>    merge_sort_recursive(arr, reg, 0, len - 1);</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>int main() {</span></span>
+<span class="line"><span>    int arr[] = { 22, 34, 3, 32, 82, 55, 89 };</span></span>
+<span class="line"><span>    int len = sizeof(arr) / sizeof(*arr);</span></span>
+<span class="line"><span>    merge_sort(arr, len);</span></span>
+<span class="line"><span>    for (int i = 0; i &lt; len; i++)</span></span>
+<span class="line"><span>        printf("%d ", arr[i]);</span></span>
+<span class="line"><span>    printf("\n"); // 增加换行以美化输出</span></span>
+<span class="line"><span>    return 0;</span></span>
+<span class="line"><span>}</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ol start="2">
+<li>Python</li>
+</ol>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span>def merge_sort_recursive(arr, reg, start, end):</span></span>
+<span class="line"><span>    if start &gt;= end:</span></span>
+<span class="line"><span>        return</span></span>
+<span class="line"><span>    mid = (start + end) // 2</span></span>
+<span class="line"><span>    merge_sort_recursive(arr, reg, start, mid)</span></span>
+<span class="line"><span>    merge_sort_recursive(arr, reg, mid + 1, end)</span></span>
+<span class="line"><span>    start1, end1 = start, mid</span></span>
+<span class="line"><span>    start2, end2 = mid + 1, end</span></span>
+<span class="line"><span>    k = start</span></span>
+<span class="line"><span>    while start1 &lt;= end1 and start2 &lt;= end2:</span></span>
+<span class="line"><span>        if arr[start1] &lt; arr[start2]:</span></span>
+<span class="line"><span>            reg[k] = arr[start1]</span></span>
+<span class="line"><span>            start1 += 1</span></span>
+<span class="line"><span>        else:</span></span>
+<span class="line"><span>            reg[k] = arr[start2]</span></span>
+<span class="line"><span>            start2 += 1</span></span>
+<span class="line"><span>        k += 1</span></span>
+<span class="line"><span>    while start1 &lt;= end1:</span></span>
+<span class="line"><span>        reg[k] = arr[start1]</span></span>
+<span class="line"><span>        start1 += 1</span></span>
+<span class="line"><span>        k += 1</span></span>
+<span class="line"><span>    while start2 &lt;= end2:</span></span>
+<span class="line"><span>        reg[k] = arr[start2]</span></span>
+<span class="line"><span>        start2 += 1</span></span>
+<span class="line"><span>        k += 1</span></span>
+<span class="line"><span>    for k in range(start, end + 1):</span></span>
+<span class="line"><span>        arr[k] = reg[k]</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>def merge_sort(arr):</span></span>
+<span class="line"><span>    reg = [0] * len(arr)</span></span>
+<span class="line"><span>    merge_sort_recursive(arr, reg, 0, len(arr) - 1)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 示例使用</span></span>
+<span class="line"><span>arr = [22, 34, 3, 32, 82, 55, 89]</span></span>
+<span class="line"><span>merge_sort(arr)</span></span>
+<span class="line"><span>print(arr)</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ol start="3">
+<li>
+<h3>分析</h3>
+</li>
+</ol>
+<p>逻辑和迭代法差不多。</p>
+]]></content>
+    <category term="代码编程"/>
+    <category term="算法"/>
+    <published>2024-07-16T00:00:00.000Z</published>
+  </entry>
   <entry>
     <title type="text">希尔排序算法</title>
     <id>https://newzone.top/code/%E7%AE%97%E6%B3%95/%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F.html</id>
