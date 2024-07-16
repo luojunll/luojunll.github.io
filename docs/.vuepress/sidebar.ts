@@ -39,6 +39,7 @@ export default sidebar({
           collapsible: true,
           children: [
             '希尔排序.md',
+            '归并排序.md'
           ],
         },
       ]
