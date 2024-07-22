@@ -42,6 +42,15 @@ export default sidebar({
             '归并排序.md'
           ],
         },
+        {
+          text: "🔒 信息安全",
+          icon: "",
+          prefix: "/code/信息安全/",
+          collapsible: true,
+          children: [
+            'xss.md',
+          ],
+        },
       ]
     },
     {
