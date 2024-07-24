@@ -49,6 +49,7 @@ export default sidebar({
           collapsible: true,
           children: [
             'xss.md',
+            'sql_injection.md',
           ],
         },
       ]
