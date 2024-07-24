@@ -4,184 +4,54 @@
   <title>LuoThink</title>
   <subtitle>开源工具、效率方法，记录并输出一切能让自己提升的知识。</subtitle>
   <icon>https://newzone.top/favicon.ico</icon>
-  <updated>2024-07-22T12:47:36.836Z</updated>
+  <updated>2024-07-24T03:13:39.308Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://newzone.top/atom.xml"/>
   <link rel="alternate" href="https://newzone.top/"/>
   <category term="代码编程"/>
+  <category term="信息安全"/>
   <category term="算法"/>
   <entry>
-    <title type="text">markdown语法示例</title>
-    <id>https://newzone.top/code/markdown/markdown%E8%AF%AD%E6%B3%95%E7%A4%BA%E4%BE%8B.html</id>
-    <link href="https://newzone.top/code/markdown/markdown%E8%AF%AD%E6%B3%95%E7%A4%BA%E4%BE%8B.html"/>
-    <updated>2024-07-15T03:01:25.000Z</updated>
+    <title type="text">portswigger sql 注入案例</title>
+    <id>https://newzone.top/code/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/sql_injection.html</id>
+    <link href="https://newzone.top/code/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/sql_injection.html"/>
+    <updated>2024-07-24T03:12:24.000Z</updated>
     <summary type="html"><![CDATA[
-<blockquote>
-<p>微信公众号排版工具。问题或建议，请公众号留言。<strong><a href="#jump_8">程序员翻身</a></strong></p>
-</blockquote>
-<p>建议使用 <strong>Chrome</strong> 浏览器，体验最佳效果。</p>
-<p>使用微信公众号编辑器有一个十分头疼的问题：粘贴出来的代码，格式错乱，空间小还带行号，而且特别丑。Markdown.com.cn编辑器能够解决这个问题。</p>
-<p>Markdown是一种轻量级的「标记语言」。</p>
-<p>请阅读下方文本熟悉工具使用方法，本文可直接拷贝到微信中预览。</p>]]></summary>
-    <content type="html"><![CDATA[
-<blockquote>
-<p>微信公众号排版工具。问题或建议，请公众号留言。<strong><a href="#jump_8">程序员翻身</a></strong></p>
-</blockquote>
-<p>建议使用 <strong>Chrome</strong> 浏览器，体验最佳效果。</p>
-<p>使用微信公众号编辑器有一个十分头疼的问题：粘贴出来的代码，格式错乱，空间小还带行号，而且特别丑。Markdown.com.cn编辑器能够解决这个问题。</p>
-<p>Markdown是一种轻量级的「标记语言」。</p>
-<p>请阅读下方文本熟悉工具使用方法，本文可直接拷贝到微信中预览。</p>
-<h2>1 Markdown.com.cn 简介</h2>
-<ul>
-<li>支持自定义样式的 Markdown 编辑器</li>
-<li>支持微信公众号、知乎和稀土掘金</li>
-<li>点击右上方对应图标，一键复制到各平台</li>
-</ul>
-<h2>2 Markdown语法教程</h2>
-<h3>2.1 标题</h3>
-<p>不同数量的<code>#</code>可以完成不同的标题，如下：</p>
-<h1>一级标题</h1>
-<h2>二级标题</h2>
-<h3>三级标题</h3>
-<h3>2.2 字体</h3>
-<p>粗体、斜体、粗体和斜体，删除线，需要在文字前后加不同的标记符号。如下：</p>
-<p><strong>这个是粗体</strong></p>
-<p><em>这个是斜体</em></p>
-<p><em><strong>这个是粗体加斜体</strong></em></p>
-<p><sub>这里想用删除线</sub>~</p>
-<p>注：如果想给字体换颜色、字体或者居中显示，需要使用内嵌HTML来实现。</p>
-<h3>2.3 无序列表</h3>
-<p>无序列表的使用，在符号<code>-</code>后加空格使用。如下：</p>
-<ul>
-<li>无序列表 1</li>
-<li>无序列表 2</li>
-<li>无序列表 3</li>
-</ul>
-<p>如果要控制列表的层级，则需要在符号<code>-</code>前使用空格。如下：</p>
-<ul>
-<li>无序列表 1</li>
-<li>无序列表 2
-<ul>
-<li>无序列表 2.1</li>
-<li>无序列表 2.2</li>
-</ul>
-</li>
-</ul>
-<p><strong>由于微信原因，最多支持到二级列表</strong>。</p>
-<h3>2.4 有序列表</h3>
-<p>有序列表的使用，在数字及符号<code>.</code>后加空格后输入内容，如下：</p>
+<h2>实验准备</h2>
 <ol>
-<li>有序列表 1</li>
-<li>有序列表 2</li>
-<li>有序列表 3</li>
+<li>案例地址：  https://portswigger.net/web-security/sql-injection/blind/lab-conditional-responses
+<br>
+2.sql 注入工具：burpsquite</li>
 </ol>
-<h3>2.5 引用</h3>
-<p>引用的格式是在符号<code>&gt;</code>后面书写文字。如下：</p>
-<blockquote>
-<p>读一本好书，就是在和高尚的人谈话。 ——歌德</p>
-</blockquote>
-<blockquote>
-<p>雇用制度对工人不利，但工人根本无力摆脱这个制度。 ——阮一峰</p>
-</blockquote>
-<h3>2.7 链接</h3>
-<p>微信公众号仅支持公众号文章链接，即域名为<code>https://mp.weixin.qq.com/</code>的合法链接。使用方法如下所示：</p>
-<p>对于该论述，欢迎读者查阅之前发过的文章，<a href="https://mp.weixin.qq.com/s/s5IhxV2ooX3JN_X416nidA" target="_blank" rel="noopener noreferrer">你是《未来世界的幸存者》么？</a>
-<a id="jump_8"></a></p>
-<h3>2.8 图片</h3>
-<p>插入图片，格式如下：</p>
-<figure><img src="https://www.nginx.cn/wp-content/uploads/2020/03/qrcode_for_gh_82cf87d482f0_258.jpg" alt="这里写图片描述" tabindex="0" loading="lazy"><figcaption>这里写图片描述</figcaption></figure>
-<p>支持 jpg、png、gif、svg 等图片格式，<strong>其中 svg 文件仅可在微信公众平台中使用</strong>，svg 文件示例如下：</p>
-<figure><img src="https://markdown.com.cn/images/i-am-svg.svg" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
-<p>支持图片<strong>拖拽和截图粘贴</strong>到编辑器中。</p>
-<p>注：支持图片 <em><strong>拖拽和截图粘贴</strong></em> 到编辑器中，仅支持 https 的图片，图片粘贴到微信时会自动上传微信服务器。</p>
-<h3>2.9 分割线</h3>
-<p>可以在一行中用三个以上的减号来建立一个分隔线，同时需要在分隔线的上面空一行。如下：</p>
+<h2>实验中遇到的坑</h2>
+<ol>
+<li>光标不齐
+需要改变一下字体大小， 在设置里搜索font。
+<br></li>
+<li>添加变量的时候需要添加$$ , 是两个不是一个。
+<br></li>
+<li>在最后的结果里，可以根据成功的标志过滤出正确响应，然后按payload1 排序，出来的就是原顺序的密码了。</li>
+</ol>]]></summary>
+    <content type="html"><![CDATA[
+<h2>实验准备</h2>
+<ol>
+<li>案例地址：  https://portswigger.net/web-security/sql-injection/blind/lab-conditional-responses
+<br>
+2.sql 注入工具：burpsquite</li>
+</ol>
+<h2>实验中遇到的坑</h2>
+<ol>
+<li>光标不齐
+需要改变一下字体大小， 在设置里搜索font。
+<br></li>
+<li>添加变量的时候需要添加$$ , 是两个不是一个。
+<br></li>
+<li>在最后的结果里，可以根据成功的标志过滤出正确响应，然后按payload1 排序，出来的就是原顺序的密码了。</li>
+</ol>
 ]]></content>
     <category term="代码编程"/>
-    <published>2024-07-14T00:00:00.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">xss记录</title>
-    <id>https://newzone.top/code/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/xss.html</id>
-    <link href="https://newzone.top/code/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/xss.html"/>
-    <updated>2024-07-22T12:46:15.000Z</updated>
-    <summary type="html"><![CDATA[
-<h2>案例一</h2>
-<ol>
-<li>源码</li>
-</ol>
-<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span>&lt;!DOCTYPE html&gt;</span></span>
-<span class="line"><span>&lt;head&gt;</span></span>
-<span class="line"><span>&lt;meta charset="utf-8"&gt;</span></span>
-<span class="line"><span>&lt;script&gt;</span></span>
-<span class="line"><span>window.alert = function()  </span></span>
-<span class="line"><span>{     </span></span>
-<span class="line"><span>confirm("哎哟 不错哦！");</span></span>
-<span class="line"><span> window.location.href="level3.php?writing=苦尽甘来"; </span></span>
-<span class="line"><span>}</span></span>
-<span class="line"><span>&lt;/script&gt;</span></span>
-<span class="line"><span>&lt;title&gt;第2关&lt;/title&gt;</span></span>
-<span class="line"><span>&lt;/head&gt;</span></span>
-<span class="line"><span>&lt;body&gt;</span></span>
-<span class="line"><span>&lt;h1 align=center&gt;第2关 窒息的操作&lt;/h1&gt;</span></span>
-<span class="line"><span>&lt;?php </span></span>
-<span class="line"><span>ini_set("display_errors", 0);</span></span>
-<span class="line"><span>$str = $_GET["keyword"];</span></span>
-<span class="line"><span>echo "&lt;h2 align=center&gt;没有找到和".htmlspecialchars($str)."相关的结果.&lt;/h2&gt;".'&lt;center&gt;</span></span>
-<span class="line"><span>&lt;form action=level2.php method=GET&gt;</span></span>
-<span class="line"><span>&lt;input name=keyword  value="'.$str.'"&gt;</span></span>
-<span class="line"><span>&lt;input type=submit name=submit value="搜索"/&gt;</span></span>
-<span class="line"><span>&lt;/form&gt;</span></span>
-<span class="line"><span>&lt;/center&gt;';</span></span>
-<span class="line"><span>?&gt;</span></span>
-<span class="line"><span>&lt;center&gt;&lt;img src="https://dn-coding-net-tweet.codehub.cn/photo/2019/688da926-8a0b-452a-9a2b-82ba919328fb.jpg"&gt;&lt;/center&gt;</span></span>
-<span class="line"><span>&lt;?php </span></span>
-<span class="line"><span>echo "&lt;h3 align=center&gt;payload的长度:".strlen($str)."&lt;/h3&gt;";</span></span>
-<span class="line"><span>?&gt;</span></span>
-<span class="line"><span>&lt;/body&gt;</span></span>
-<span class="line"><span>&lt;/html&gt;</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></summary>
-    <content type="html"><![CDATA[
-<h2>案例一</h2>
-<ol>
-<li>源码</li>
-</ol>
-<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span>&lt;!DOCTYPE html&gt;</span></span>
-<span class="line"><span>&lt;head&gt;</span></span>
-<span class="line"><span>&lt;meta charset="utf-8"&gt;</span></span>
-<span class="line"><span>&lt;script&gt;</span></span>
-<span class="line"><span>window.alert = function()  </span></span>
-<span class="line"><span>{     </span></span>
-<span class="line"><span>confirm("哎哟 不错哦！");</span></span>
-<span class="line"><span> window.location.href="level3.php?writing=苦尽甘来"; </span></span>
-<span class="line"><span>}</span></span>
-<span class="line"><span>&lt;/script&gt;</span></span>
-<span class="line"><span>&lt;title&gt;第2关&lt;/title&gt;</span></span>
-<span class="line"><span>&lt;/head&gt;</span></span>
-<span class="line"><span>&lt;body&gt;</span></span>
-<span class="line"><span>&lt;h1 align=center&gt;第2关 窒息的操作&lt;/h1&gt;</span></span>
-<span class="line"><span>&lt;?php </span></span>
-<span class="line"><span>ini_set("display_errors", 0);</span></span>
-<span class="line"><span>$str = $_GET["keyword"];</span></span>
-<span class="line"><span>echo "&lt;h2 align=center&gt;没有找到和".htmlspecialchars($str)."相关的结果.&lt;/h2&gt;".'&lt;center&gt;</span></span>
-<span class="line"><span>&lt;form action=level2.php method=GET&gt;</span></span>
-<span class="line"><span>&lt;input name=keyword  value="'.$str.'"&gt;</span></span>
-<span class="line"><span>&lt;input type=submit name=submit value="搜索"/&gt;</span></span>
-<span class="line"><span>&lt;/form&gt;</span></span>
-<span class="line"><span>&lt;/center&gt;';</span></span>
-<span class="line"><span>?&gt;</span></span>
-<span class="line"><span>&lt;center&gt;&lt;img src="https://dn-coding-net-tweet.codehub.cn/photo/2019/688da926-8a0b-452a-9a2b-82ba919328fb.jpg"&gt;&lt;/center&gt;</span></span>
-<span class="line"><span>&lt;?php </span></span>
-<span class="line"><span>echo "&lt;h3 align=center&gt;payload的长度:".strlen($str)."&lt;/h3&gt;";</span></span>
-<span class="line"><span>?&gt;</span></span>
-<span class="line"><span>&lt;/body&gt;</span></span>
-<span class="line"><span>&lt;/html&gt;</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ol start="2">
-<li>url参数
-<code>example.php?keyword=" onmouseover="alert('XSS')</code></li>
-</ol>
-]]></content>
-    <published>2024-07-22T12:46:15.000Z</published>
+    <category term="信息安全"/>
+    <published>2024-07-16T00:00:00.000Z</published>
   </entry>
   <entry>
     <title type="text">归并排序</title>
@@ -566,5 +436,178 @@
     <category term="代码编程"/>
     <category term="算法"/>
     <published>2024-07-15T00:00:00.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">markdown语法示例</title>
+    <id>https://newzone.top/code/markdown/markdown%E8%AF%AD%E6%B3%95%E7%A4%BA%E4%BE%8B.html</id>
+    <link href="https://newzone.top/code/markdown/markdown%E8%AF%AD%E6%B3%95%E7%A4%BA%E4%BE%8B.html"/>
+    <updated>2024-07-15T03:01:25.000Z</updated>
+    <summary type="html"><![CDATA[
+<blockquote>
+<p>微信公众号排版工具。问题或建议，请公众号留言。<strong><a href="#jump_8">程序员翻身</a></strong></p>
+</blockquote>
+<p>建议使用 <strong>Chrome</strong> 浏览器，体验最佳效果。</p>
+<p>使用微信公众号编辑器有一个十分头疼的问题：粘贴出来的代码，格式错乱，空间小还带行号，而且特别丑。Markdown.com.cn编辑器能够解决这个问题。</p>
+<p>Markdown是一种轻量级的「标记语言」。</p>
+<p>请阅读下方文本熟悉工具使用方法，本文可直接拷贝到微信中预览。</p>]]></summary>
+    <content type="html"><![CDATA[
+<blockquote>
+<p>微信公众号排版工具。问题或建议，请公众号留言。<strong><a href="#jump_8">程序员翻身</a></strong></p>
+</blockquote>
+<p>建议使用 <strong>Chrome</strong> 浏览器，体验最佳效果。</p>
+<p>使用微信公众号编辑器有一个十分头疼的问题：粘贴出来的代码，格式错乱，空间小还带行号，而且特别丑。Markdown.com.cn编辑器能够解决这个问题。</p>
+<p>Markdown是一种轻量级的「标记语言」。</p>
+<p>请阅读下方文本熟悉工具使用方法，本文可直接拷贝到微信中预览。</p>
+<h2>1 Markdown.com.cn 简介</h2>
+<ul>
+<li>支持自定义样式的 Markdown 编辑器</li>
+<li>支持微信公众号、知乎和稀土掘金</li>
+<li>点击右上方对应图标，一键复制到各平台</li>
+</ul>
+<h2>2 Markdown语法教程</h2>
+<h3>2.1 标题</h3>
+<p>不同数量的<code>#</code>可以完成不同的标题，如下：</p>
+<h1>一级标题</h1>
+<h2>二级标题</h2>
+<h3>三级标题</h3>
+<h3>2.2 字体</h3>
+<p>粗体、斜体、粗体和斜体，删除线，需要在文字前后加不同的标记符号。如下：</p>
+<p><strong>这个是粗体</strong></p>
+<p><em>这个是斜体</em></p>
+<p><em><strong>这个是粗体加斜体</strong></em></p>
+<p><sub>这里想用删除线</sub>~</p>
+<p>注：如果想给字体换颜色、字体或者居中显示，需要使用内嵌HTML来实现。</p>
+<h3>2.3 无序列表</h3>
+<p>无序列表的使用，在符号<code>-</code>后加空格使用。如下：</p>
+<ul>
+<li>无序列表 1</li>
+<li>无序列表 2</li>
+<li>无序列表 3</li>
+</ul>
+<p>如果要控制列表的层级，则需要在符号<code>-</code>前使用空格。如下：</p>
+<ul>
+<li>无序列表 1</li>
+<li>无序列表 2
+<ul>
+<li>无序列表 2.1</li>
+<li>无序列表 2.2</li>
+</ul>
+</li>
+</ul>
+<p><strong>由于微信原因，最多支持到二级列表</strong>。</p>
+<h3>2.4 有序列表</h3>
+<p>有序列表的使用，在数字及符号<code>.</code>后加空格后输入内容，如下：</p>
+<ol>
+<li>有序列表 1</li>
+<li>有序列表 2</li>
+<li>有序列表 3</li>
+</ol>
+<h3>2.5 引用</h3>
+<p>引用的格式是在符号<code>&gt;</code>后面书写文字。如下：</p>
+<blockquote>
+<p>读一本好书，就是在和高尚的人谈话。 ——歌德</p>
+</blockquote>
+<blockquote>
+<p>雇用制度对工人不利，但工人根本无力摆脱这个制度。 ——阮一峰</p>
+</blockquote>
+<h3>2.7 链接</h3>
+<p>微信公众号仅支持公众号文章链接，即域名为<code>https://mp.weixin.qq.com/</code>的合法链接。使用方法如下所示：</p>
+<p>对于该论述，欢迎读者查阅之前发过的文章，<a href="https://mp.weixin.qq.com/s/s5IhxV2ooX3JN_X416nidA" target="_blank" rel="noopener noreferrer">你是《未来世界的幸存者》么？</a>
+<a id="jump_8"></a></p>
+<h3>2.8 图片</h3>
+<p>插入图片，格式如下：</p>
+<figure><img src="https://www.nginx.cn/wp-content/uploads/2020/03/qrcode_for_gh_82cf87d482f0_258.jpg" alt="这里写图片描述" tabindex="0" loading="lazy"><figcaption>这里写图片描述</figcaption></figure>
+<p>支持 jpg、png、gif、svg 等图片格式，<strong>其中 svg 文件仅可在微信公众平台中使用</strong>，svg 文件示例如下：</p>
+<figure><img src="https://markdown.com.cn/images/i-am-svg.svg" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<p>支持图片<strong>拖拽和截图粘贴</strong>到编辑器中。</p>
+<p>注：支持图片 <em><strong>拖拽和截图粘贴</strong></em> 到编辑器中，仅支持 https 的图片，图片粘贴到微信时会自动上传微信服务器。</p>
+<h3>2.9 分割线</h3>
+<p>可以在一行中用三个以上的减号来建立一个分隔线，同时需要在分隔线的上面空一行。如下：</p>
+]]></content>
+    <category term="代码编程"/>
+    <published>2024-07-14T00:00:00.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">xss记录</title>
+    <id>https://newzone.top/code/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/xss.html</id>
+    <link href="https://newzone.top/code/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/xss.html"/>
+    <updated>2024-07-22T12:46:15.000Z</updated>
+    <summary type="html"><![CDATA[
+<h2>案例一</h2>
+<ol>
+<li>源码</li>
+</ol>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span>&lt;!DOCTYPE html&gt;</span></span>
+<span class="line"><span>&lt;head&gt;</span></span>
+<span class="line"><span>&lt;meta charset="utf-8"&gt;</span></span>
+<span class="line"><span>&lt;script&gt;</span></span>
+<span class="line"><span>window.alert = function()  </span></span>
+<span class="line"><span>{     </span></span>
+<span class="line"><span>confirm("哎哟 不错哦！");</span></span>
+<span class="line"><span> window.location.href="level3.php?writing=苦尽甘来"; </span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span>&lt;/script&gt;</span></span>
+<span class="line"><span>&lt;title&gt;第2关&lt;/title&gt;</span></span>
+<span class="line"><span>&lt;/head&gt;</span></span>
+<span class="line"><span>&lt;body&gt;</span></span>
+<span class="line"><span>&lt;h1 align=center&gt;第2关 窒息的操作&lt;/h1&gt;</span></span>
+<span class="line"><span>&lt;?php </span></span>
+<span class="line"><span>ini_set("display_errors", 0);</span></span>
+<span class="line"><span>$str = $_GET["keyword"];</span></span>
+<span class="line"><span>echo "&lt;h2 align=center&gt;没有找到和".htmlspecialchars($str)."相关的结果.&lt;/h2&gt;".'&lt;center&gt;</span></span>
+<span class="line"><span>&lt;form action=level2.php method=GET&gt;</span></span>
+<span class="line"><span>&lt;input name=keyword  value="'.$str.'"&gt;</span></span>
+<span class="line"><span>&lt;input type=submit name=submit value="搜索"/&gt;</span></span>
+<span class="line"><span>&lt;/form&gt;</span></span>
+<span class="line"><span>&lt;/center&gt;';</span></span>
+<span class="line"><span>?&gt;</span></span>
+<span class="line"><span>&lt;center&gt;&lt;img src="https://dn-coding-net-tweet.codehub.cn/photo/2019/688da926-8a0b-452a-9a2b-82ba919328fb.jpg"&gt;&lt;/center&gt;</span></span>
+<span class="line"><span>&lt;?php </span></span>
+<span class="line"><span>echo "&lt;h3 align=center&gt;payload的长度:".strlen($str)."&lt;/h3&gt;";</span></span>
+<span class="line"><span>?&gt;</span></span>
+<span class="line"><span>&lt;/body&gt;</span></span>
+<span class="line"><span>&lt;/html&gt;</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></summary>
+    <content type="html"><![CDATA[
+<h2>案例一</h2>
+<ol>
+<li>源码</li>
+</ol>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span>&lt;!DOCTYPE html&gt;</span></span>
+<span class="line"><span>&lt;head&gt;</span></span>
+<span class="line"><span>&lt;meta charset="utf-8"&gt;</span></span>
+<span class="line"><span>&lt;script&gt;</span></span>
+<span class="line"><span>window.alert = function()  </span></span>
+<span class="line"><span>{     </span></span>
+<span class="line"><span>confirm("哎哟 不错哦！");</span></span>
+<span class="line"><span> window.location.href="level3.php?writing=苦尽甘来"; </span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span>&lt;/script&gt;</span></span>
+<span class="line"><span>&lt;title&gt;第2关&lt;/title&gt;</span></span>
+<span class="line"><span>&lt;/head&gt;</span></span>
+<span class="line"><span>&lt;body&gt;</span></span>
+<span class="line"><span>&lt;h1 align=center&gt;第2关 窒息的操作&lt;/h1&gt;</span></span>
+<span class="line"><span>&lt;?php </span></span>
+<span class="line"><span>ini_set("display_errors", 0);</span></span>
+<span class="line"><span>$str = $_GET["keyword"];</span></span>
+<span class="line"><span>echo "&lt;h2 align=center&gt;没有找到和".htmlspecialchars($str)."相关的结果.&lt;/h2&gt;".'&lt;center&gt;</span></span>
+<span class="line"><span>&lt;form action=level2.php method=GET&gt;</span></span>
+<span class="line"><span>&lt;input name=keyword  value="'.$str.'"&gt;</span></span>
+<span class="line"><span>&lt;input type=submit name=submit value="搜索"/&gt;</span></span>
+<span class="line"><span>&lt;/form&gt;</span></span>
+<span class="line"><span>&lt;/center&gt;';</span></span>
+<span class="line"><span>?&gt;</span></span>
+<span class="line"><span>&lt;center&gt;&lt;img src="https://dn-coding-net-tweet.codehub.cn/photo/2019/688da926-8a0b-452a-9a2b-82ba919328fb.jpg"&gt;&lt;/center&gt;</span></span>
+<span class="line"><span>&lt;?php </span></span>
+<span class="line"><span>echo "&lt;h3 align=center&gt;payload的长度:".strlen($str)."&lt;/h3&gt;";</span></span>
+<span class="line"><span>?&gt;</span></span>
+<span class="line"><span>&lt;/body&gt;</span></span>
+<span class="line"><span>&lt;/html&gt;</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ol start="2">
+<li>url参数
+<code>example.php?keyword=" onmouseover="alert('XSS')</code></li>
+</ol>
+]]></content>
+    <published>2024-07-22T12:46:15.000Z</published>
   </entry>
 </feed>
