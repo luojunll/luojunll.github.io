@@ -64,5 +64,15 @@ export default sidebar({
       collapsible: true,
       children: "structure",
     },
+    {
+      text: "python 记录",
+      icon: "fa-brands fa-python",
+      prefix: "/python/",
+      link: "/python",
+      collapsible: true,
+      children: [
+        "python传参机制.md"
+      ]
+    }
   ],
 });
