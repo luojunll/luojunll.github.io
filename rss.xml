@@ -6,8 +6,8 @@
     <link>https://newzone.top/</link>
     <description>开源工具、效率方法，记录并输出一切能让自己提升的知识。</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 14 Jan 2025 15:23:07 GMT</pubDate>
-    <lastBuildDate>Tue, 14 Jan 2025 15:23:07 GMT</lastBuildDate>
+    <pubDate>Wed, 15 Jan 2025 04:04:55 GMT</pubDate>
+    <lastBuildDate>Wed, 15 Jan 2025 04:04:55 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>代码编程</category>
@@ -455,6 +455,47 @@
 <code>example.php?keyword=" onmouseover="alert('XSS')</code></li>
 </ol>
 ]]></content:encoded>
+    </item>
+    <item>
+      <title>快速排序</title>
+      <link>https://newzone.top/code/%E7%AE%97%E6%B3%95/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F.html</link>
+      <guid>https://newzone.top/code/%E7%AE%97%E6%B3%95/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F.html</guid>
+      <source url="https://newzone.top/rss.xml">快速排序</source>
+      <description>快速排序</description>
+      <pubDate>Wed, 15 Jan 2025 04:03:38 GMT</pubDate>
+      <content:encoded><![CDATA[
+<div class="language-python line-numbers-mode" data-highlighter="shiki" data-ext="python" data-title="python" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"""</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">快速排序</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">第一步</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">先去找一个基准数， 再设2个指针i,j， i从左到右遍历， 找到大于基准数的数时停止，</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">j从右到左遍历， 找到小于基准数的数时停止， 然后交换i,j的位置， </span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">i和j再分别向两边扩展， 直到i和j相遇， 再把基准数插入到这个相遇的位置</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">第二步</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">第一步产生了两个子数组， 再分别运用第一步。</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"""</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">def</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF"> partion</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#24292E;--shiki-dark:#D19A66;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">left</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#24292E;--shiki-dark:#D19A66;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">right</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">):</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    pivot </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> lst[left]</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    while</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> left </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">&lt;</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> right:</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">        while</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> left </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">&lt;</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> right </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">and</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> lst[right] </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">&gt;=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> pivot:</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">            right </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">-=</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 1</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">        while</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> left </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">&lt;</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> right </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">and</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> lst[left] </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">&lt;=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> pivot:</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">            left </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">+=</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 1</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">        lst[left], lst[right] </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> lst[right], lst[left]</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    lst[left] </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> pivot</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    return</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> left</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">def</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF"> quick</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#24292E;--shiki-dark:#D19A66;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">left</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#24292E;--shiki-dark:#D19A66;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">right</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">):</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    if</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> left </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">&gt;=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> right:</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">        return</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    pivot </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF"> partion</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(left, right)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">    quick</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(left, pivot </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">-</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 1</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">    quick</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(pivot </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">+</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 1</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, right)</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">    return</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> lst</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    </span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">lst </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> [</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">4</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">8</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">,</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">3</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">5</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">2</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">7</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">6</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">,</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">]</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2">print</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#24292E;--shiki-dark:#61AFEF">quick</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">0</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2">len</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(lst) </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">-</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 1</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">))</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></content:encoded>
     </item>
     <item>
       <title>选择排序</title>
