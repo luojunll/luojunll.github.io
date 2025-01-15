@@ -40,7 +40,8 @@ export default sidebar({
           children: [
             '希尔排序.md',
             '归并排序.md',
-            '选择排序、冒泡排序、插入排序.md'
+            '选择排序、冒泡排序、插入排序.md',
+            '快速排序.md',
           ],
         },
         {
